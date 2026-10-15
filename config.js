@@ -6,9 +6,11 @@
 // link: for programs that credit a query parameter on the store itself (?ref=abc).
 //   Unused here because deepLinkTemplate is set.
 // deepLinkTemplate: networks with their own tracking domain. {url} = the URL-encoded
-//   destination page. When set, it is used instead of `link`.
+//   destination page; {clickref} = per-link label <site>-<section>-<kind>-<product> (Awin sub-ID).
+//   When set, it is used instead of `link`.
 window.AFFILIATE = {
+  site: "homegrowkits",  // first part of each link's clickref label in Awin reports
   store: "https://thebudgrower.com",
   link: "",
-  deepLinkTemplate: "https://www.awin1.com/cread.php?awinmid=82211&awinaffid=2085789&ued={url}"
+  deepLinkTemplate: "https://www.awin1.com/cread.php?awinmid=82211&awinaffid=2085789&clickref={clickref}&ued={url}"
 };
